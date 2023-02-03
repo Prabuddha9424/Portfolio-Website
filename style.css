@@ -1,0 +1,627 @@
+*{
+    margin: 0px;
+    border: 2px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #131313;
+    color: white;
+    margin: 0px;
+}
+.change-color{
+    color: orangered;
+}
+
+/* ************ Navigation bar ************** */
+
+.navbar-container{
+    padding: 0 25px 15px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #131313;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    padding: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    position: relative;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 1000;
+}
+.menu{
+    display: none;
+}
+nav .fa-solid{
+    display: none;
+}
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: orangered;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+/* ************ Head Section ************** */
+
+#header{
+    margin-top: 70PX;
+    width: 100%;
+    height: 500px;
+    background-image: url(images/Background_img.jpg);
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: 600px 0px;
+}
+.container{
+    padding: 15px 25px;
+}
+
+.header-text{
+    margin-left: 25px;
+}
+#main-header{
+    font-size: 40px;
+    padding: 10px 10px 15px 0; 
+}
+.header-para{
+    margin-top: 20px;
+    margin-right: 60%;
+    line-height: 2;
+}
+
+
+/* ************ About Section ************** */
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.column-1{
+    flex-basis: 45%; 
+}
+.column-1 img{
+    width: 100%;
+}
+.column-2{
+    margin-top: -100px;
+    flex-basis: 50%;
+    line-height: 3;
+}
+.column-2 h2{
+    padding: 8px;
+    font-size: 35px;
+}
+
+/* ************ Skills Section ************** */
+
+.skills-container h2{
+    padding: 20px;
+    font-size: 35px;
+    text-align: center;
+}
+.slide-text h4{
+    padding: 10px;
+    text-align: center;
+}
+.slide-text p{
+    text-align: center;
+}
+.slide-img{
+    margin: 20px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-img img{
+    width: 15%;
+}
+.slide-row{
+    display: flex;
+    width: 300%;
+    position: relative;
+    transition: 0.5s;
+}
+.slide-col{
+    width: 90%;
+    position: relative;
+}
+.skills-button{
+    position: relative;
+    bottom: -20px;
+    justify-content: center;
+    left: 47%;
+}
+.button{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: orangered;
+    cursor: pointer;
+}
+.active{
+    width: 45px;
+    transition: 0.5s;
+}
+
+/* ************ Education Section ************** */
+
+.education-container{
+    padding: 15px 45px;
+}
+.education-container h2 {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    text-align: left;
+}
+.education-row{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.education-img img{
+    width: 60%;
+}
+.education-text h4{
+    padding: 10px;
+}
+.education-text p{
+    padding: 5px 10px;
+}
+.education-img img:hover{
+    transform: rotateY(360deg);
+    transform-origin: center;
+    transition: 1.5s;
+}
+
+/* ************ AchievementSection ************** */
+
+.achievement-container h2{
+    padding: 20px 20px 20px 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+    text-align: left;
+}
+.achievement-container{
+    padding: 15px 65px;
+}
+.certificate img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+.certificate{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.achievement-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+.certificate-text{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), orangered);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5S;
+
+}
+.certificate-text h5{
+    padding: 10px;
+}
+.certificate-text a{
+    margin-top: 20px;
+    color: orangered;
+    font-size: 18px;
+    line-height: 50px;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.certificate:hover img{
+    transform: scale(1.1);
+}
+.certificate:hover .certificate-text{
+    height: 100%;
+}
+
+/* ************ Experience Section ************** */
+
+.experience-container{
+    padding: 15px 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+}
+#experience h2{
+    padding: 20px 20px 20px 65px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+    text-align: left;
+}
+.ecperience-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgb(49, 47, 47);
+    border-radius: 10px;
+    margin-top: 40px;  
+}
+.ecperience-col img{
+    width: 80%;
+    border: 20px;
+    border-radius: 10px;
+    margin-top: -20px;
+    transition: transform 0.5s;
+}
+.experience-text p{
+    font-size: 13px;
+    padding: 10px;
+}
+.experience-text h4{
+    padding: 10px;
+}
+
+.experience-text h5{
+    padding: 5px;
+}
+.ecperience-col:hover img{
+    transform: scale(1.1);
+}
+
+
+/* ************ Contact Section ************** */
+
+#contact{
+    padding: 15px 65px; 
+    text-align: left; 
+}
+.contact-head{
+    margin: 20px 0;
+    font-size: 35px;
+    margin-top: 40px;
+}
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.contact-col1 p a{
+    color: white;
+}
+.contact-col1 p{
+    margin: 20px 0;
+}
+.contact-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    font-size: 25px;
+}
+.contact-row a{
+    color: white;
+}
+.download-btn{
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background: white;
+    text-decoration: none;
+    color: #131313;
+}
+.fa-brands:hover{
+    color: orangered;
+    transform: scale(1.2);
+}
+.contact-col1 p:hover{
+    color: orangered;
+}
+.download-btn:hover{
+    background: orangered;
+    transform: scale(1.2);
+}
+nav .fa-solid{
+    display: none;
+}
+
+
+/* ************ Small Screen Section ************** */
+
+@media only screen and (max-width: 850px){
+    body{
+        background-size: 400px;
+        background-position:100% 2%;
+    }
+
+    /* ************ Navigation Section ************** */
+
+    nav{
+        padding: 15px 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    nav h1{
+        position: absolute;
+        top: 20px;
+    }
+    .menu{
+        position: absolute;
+        display: flex;
+        right: 30px;
+        top: 25px;
+        cursor: pointer;
+    }
+    #sidemenu{
+        position: absolute;
+        width: 150px;
+        border-radius: 10px;
+        top: 0;
+        right: 0;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        margin: 0; 
+        background: #1b1b1b;
+        padding: 0;
+        transition: 0.5s;
+        z-index: 99;
+    }
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 100;
+        position: relative;
+
+    }
+    .logo{
+        font-size: 15px;
+        font-weight: 1000;
+    }
+    nav .fa-solid{
+        display: block;
+        margin-bottom: 10px;
+    }
+    nav ul i{
+        cursor: pointer;
+    }
+    nav ul li a:hover{
+        color: orangered;
+    }
+
+    /* ************ Head Section ************** */
+
+    #header{
+        margin-top: 10PX;
+        background-image: url(images/Background_img.jpg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-attachment: local;
+        background-position: center;
+        }
+    .logo{
+        font-size: 20px;
+        font-weight: 1000;
+    }
+    
+    .container{
+        padding: 15px 25px;
+        
+    }
+    
+    .header-text{
+        margin-left: 25px;
+    }
+    #main-header{
+        font-size: 40px;
+        padding: 10px 10px 10px 0; 
+    }
+    .header-para{
+        margin-top: 250px;
+        margin-right: 0%;
+        line-height: 2;
+        
+    }
+
+    /* ************ About Section ************** */
+
+    .about-container{
+        position: relative;
+        top: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .column-1{
+        flex-basis: 45%; 
+        position: relative;
+    }
+    .column-1 img{
+        width: 100%;
+    }
+    .column-2{
+        position: absolute;
+        bottom: -300px;
+        margin-top: -20px;
+        margin: 0 40px;
+        flex-basis: 50%;
+        line-height: 3;
+    }
+    .column-2 h2{
+        padding: 4px;
+        font-size: 35px;
+    }
+
+    /* ************ Skills Section ************** */
+
+    .skills-container{
+        position: relative;
+        top: 600px;
+    }
+    .skills-container h2{
+        text-align: left;
+        margin-left: 20px;
+    }
+    .skills-button{
+        left: 35%;
+    }
+
+    /* ************ Education Section ************** */
+
+    .education-container{
+        position: relative;
+        top: 620px;
+        padding: 0 0 0 20px;
+    }
+    .education-container h2 {
+        padding-left: 10;
+        margin: 0;
+    }
+    .education-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+    .education-img{
+        width: 40%;
+        align-items: center;
+    }
+    .education-img img{
+        width: 100%;
+    }
+    .education-text{
+        padding: 10px;
+    }
+
+    .education-img img:hover{
+        transform: rotateY(360deg);
+        transform-origin: center;
+        transition: 1.5s;
+    }
+
+    /* ************ AcievementSection ************** */
+
+    #achievement{
+        position: relative;
+        top: 620px;
+    }
+    .achievement-container h2{
+        font-size: 35px;
+    }
+    .achievement-container{
+        padding: 15px 45px;
+    }
+    .certificate{
+        width: 80%;
+    }
+    .achievement-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    /* ************ Experience Section ************** */
+
+    #experience{
+        position: relative;
+        top: 620px;
+    }
+    .experience-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+    #experience h2{
+        padding: 20px 20px 20px 45px;
+    }
+    
+    /* ************ Contact Section ************** */
+
+    #contact{
+        position: relative;
+        top: 620px;
+        padding: 20px 20px 20px 45px;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    .contact-col2{
+        padding-top: 60px;
+        padding-bottom: 40px;
+        width: 100%;
+    }
+    .contact-col1{
+        width: 100%;
+    }
+    .contact-row{
+        width: 40%;
+    }
+    
+ }
